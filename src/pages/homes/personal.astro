@@ -22,11 +22,11 @@ const metadata = {
     <Header
       links={[
         { text: 'Home', href: '#' },
-        { text: 'About', href: '#about' },
-        { text: 'Resume', href: '#resume' },
-        { text: 'Porfolio', href: '#porfolio' },
-        { text: 'Blog', href: '#blog' },
-        { text: 'Github', href: 'https://github.com/onwidget' },
+        // { text: 'About', href: '#about' },
+        // { text: 'Resume', href: '#resume' },
+        { text: 'Projects', href: '/projects' },
+        // { text: 'Blog', href: '#blog' },
+        // { text: 'Github', href: 'https://github.com/onwidget' },
       ]}
       actions={[
         {
@@ -42,21 +42,46 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero
-    id="hero"
-    title="Sarah Johnson"
-    tagline="Personal Web Demo"
-    actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
-  >
-    <Fragment slot="subtitle">
-      I'm a Graphic Designer passionate about crafting visual stories. <br /> With 5 years of experience and a degree from
-      New York University's School of Design. I infuse vitality into brands and designs, transforming concepts into captivating
-      realities.
-    </Fragment>
-  </Hero>
+  id="hero"
+  title="Maulen Mukhatbek"
+  tagline="Personal Website"
+  actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}>
+  
+  <Fragment slot="subtitle">
+    <div style="
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      align-items: center;
+      gap: 2rem;
+    ">
+      <div style="line-height: 1.6; font-size: 1rem;">
+        I'm a third-year Electrical Engineering student at New York University.
+        <!-- <span style="display: inline-block; vertical-align: middle; margin-left: 0.3em;">
+          <img 
+            src="/src/assets/images/nyu-logo.png" 
+            alt="NYU-logo" 
+            style="width: 1.0em; height: 1.2em; border-radius: 50%; display: inline-block;"
+          />
+        </span>. -->
+        <br />
+        I have worked at <a href="https://nyuad.nyu.edu/en/academics/divisions/engineering/faculty/sohmyung-ha.html" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Professor Sohmyung Ha's</a> lab on ultra-low power telemetry circuits, including antenna design and verification.
+        I am currently working on a Machine Learning-enhanced nocturnal blood pressure measuring device based on PPG and mechano-acoustic signal acquisition.
+      </div>
+  
+      <div style="text-align: right;">
+        <img
+          src="/src/assets/images/myphoto.jpg"
+          alt="Maulen Mukhatbek"
+          style="width: 100%; max-width: 300px; border-radius: 1rem;"
+        />
+      </div>
+    </div>
+  </Fragment>  
+</Hero>
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     id="about"
     columns={3}
     items={[
@@ -109,11 +134,11 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Steps Widget ****************** -->
 
-  <Steps
+  <!-- <Steps
     id="resume"
     title="Work experience"
     items={[
@@ -131,11 +156,11 @@ const metadata = {
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
-  />
+  /> -->
 
   <!-- Steps Widget ****************** -->
 
-  <Steps
+  <!-- <Steps
     id="resume"
     title="Education"
     items={[
@@ -149,61 +174,57 @@ const metadata = {
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
-  />
+  /> -->
 
   <!-- Features3 Widget ************** -->
 
   <Features3
     title="Skills"
-    subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
+    subtitle=""
     columns={3}
     defaultIcon="tabler:point-filled"
     items={[
       {
-        title: 'Graphic design',
-        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
+        title: 'Programming Languages:',
+        description: 'C++, Python, MATLAB, C#, GAMS',
       },
       {
-        title: 'Branding and identity',
-        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
+        title: 'Hardware Design & EDA Tools:',
+        description: 'Cadence Virtuoso, Altium Designer, Ansys HFSS, VHDL, Verilog, Analog & Digital Circuit Design, PCB Design, RF/Microwave Design, FPGA (Xilinx), CMOS Design, Digital IC Design, Logic Synthesis',
       },
       {
-        title: 'User-centered design',
-        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
+        title: 'Machine Learning:',
+        description: 'PyTorch, TensorFlow, Keras, TinyML',
       },
       {
-        title: 'Adobe Creative Suite',
-        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
+        title: 'Embedded Systems & Computer Architecture:',
+        description: 'RISC-V (ISA), Processor Architecture, Memory Hierarchies, Parallel Computing, Microcontroller Programming',
       },
       {
-        title: 'Typography',
-        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
+        title: 'Lab Tools:',
+        description: 'Vector Network Analyzer, Oscilloscope, Function generator, Multimeter, PCB printing, 3D printing, Soldering',
       },
       {
-        title: 'Color theory',
-        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
+        title: 'Optimization:',
+        description: 'GAMS, Excel',
       },
       {
-        title: 'Print and digital design',
-        description: 'Knowledgeable in designing for both print materials and digital platforms.',
-      },
-      {
-        title: 'Attention to detail',
-        description: 'Diligent in maintaining precision and quality in all design work.',
-      },
-      {
-        title: 'Adaptability',
-        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
+        title: 'Languages:',
+        description: 'Kazakh (Native), Russian (Fluent), English (Fluent)',
       },
     ]}
+    <Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
   />
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     id="porfolio"
-    title="Elevating visual narratives"
-    subtitle="Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives."
+    title="Projects Short Overview"
+    subtitle="Selected Projects"
     isReversed
     items={[
       {
@@ -237,11 +258,11 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     isReversed
     isAfterContent={true}
     items={[
@@ -275,11 +296,11 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     isReversed
     isAfterContent={true}
     items={[
@@ -312,11 +333,11 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Testimonials Widget *********** -->
 
-  <Testimonials
+  <!-- <Testimonials
     title="Client testimonials"
     subtitle="Discover what clients have to say about their experiences working with me."
     testimonials={[
@@ -375,11 +396,11 @@ const metadata = {
         },
       },
     ]}
-  />
+  /> -->
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
+  <!-- <CallToAction
     title="Let's create together"
     subtitle="Ready to transform your vision into captivating designs?"
     actions={[
@@ -389,11 +410,11 @@ const metadata = {
         href: '/',
       },
     ]}
-  />
+  /> -->
 
   <!-- BlogLatestPost Widget **************** -->
 
-  <BlogLatestPosts
+  <!-- <BlogLatestPosts
     id="blog"
     title="Explore my insightful articles on my blog"
     information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
@@ -402,4 +423,4 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </BlogLatestPosts>
-</Layout>
+</Layout> -->
